@@ -14,9 +14,10 @@ type Employee struct {
 type FullTimeEmployee struct {
 	Person
 	Employee
-	endDate string
+	taxRate int
 }
 
+// Implementación implicta de la interface
 func (ftEmployee FullTimeEmployee) getMessage() string {
 	return "Full Time Employee"
 }
@@ -24,9 +25,10 @@ func (ftEmployee FullTimeEmployee) getMessage() string {
 type TemporaryEmployee struct {
 	Person
 	Employee
-	taxRate int
+	endDate string
 }
 
+// Implementación implicta de la interface
 func (tEmployee TemporaryEmployee) getMessage() string {
 	return "Temporary Employee"
 }
